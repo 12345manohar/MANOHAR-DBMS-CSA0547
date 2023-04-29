@@ -1,0 +1,99 @@
+1.mysql> create table student(reg_no int(3),  name varchar(15), gender varchar(1), dob int(8), mobileno int(10), city varchar(15));
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> desc student;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| reg_no   | int(3)      | YES  |     | NULL    |       |
+| name     | varchar(15) | YES  |     | NULL    |       |
+| gender   | varchar(1)  | YES  |     | NULL    |       |
+| dob      | int(8)      | YES  |     | NULL    |       |
+| mobileno | int(10)     | YES  |     | NULL    |       |
+| city     | varchar(15) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+6 rows in set (0.01 sec)
+
+2.mysql> create table faculty(facNo int(5),facName varchar(15),Gender varchar(1),DOB int(8),DOJ int(8),MobileNo int(10));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> desc faculty
+    -> fculy;
+Empty set (0.02 sec)
+
+mysql> desc faculty;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| facNo    | int(5)      | YES  |     | NULL    |       |
+| facName  | varchar(15) | YES  |     | NULL    |       |
+| Gender   | varchar(1)  | YES  |     | NULL    |       |
+| DOB      | int(8)      | YES  |     | NULL    |       |
+| DOJ      | int(8)      | YES  |     | NULL    |       |
+| MobileNo | int(10)     | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+6 rows in set (0.01 sec)
+
+3.mysql> create table department(DeptNO int(4), DeptName varchar(15), DeptHead varchar(4));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> desc department;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| DeptNO   | int(4)      | YES  |     | NULL    |       |
+| DeptName | varchar(15) | YES  |     | NULL    |       |
+| DeptHead | varchar(4)  | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+4.
+mysql> create table course(courseno int(3), coursedesc varchar(14), coursetype varchar(8), semno int(1), Hallno int(4), FacNo int(10));
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> desc course;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| courseno   | int(3)      | YES  |     | NULL    |       |
+| coursedesc | varchar(14) | YES  |     | NULL    |       |
+| coursetype | varchar(8)  | YES  |     | NULL    |       |
+| semno      | int(1)      | YES  |     | NULL    |       |
+| Hallno     | int(4)      | YES  |     | NULL    |       |
+| FacNo      | int(10)     | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+5.mysql> alter table faculty
+    -> add dept_no varchar(20);
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc faculty;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| facNo    | int(5)      | YES  |     | NULL    |       |
+| facName  | varchar(15) | YES  |     | NULL    |       |
+| Gender   | varchar(1)  | YES  |     | NULL    |       |
+| DOB      | int(8)      | YES  |     | NULL    |       |
+| DOJ      | int(8)      | YES  |     | NULL    |       |
+| MobileNo | int(10)     | YES  |     | NULL    |       |
+| dept_no  | varchar(20) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> show tables;
++-------------------+
+| Tables_in_manohar |
++-------------------+
+| course            |
+| department        |
+| faculty           |
+| student           |
++-------------------+
+4 rows in set (0.00 sec)
+
+
+
+
